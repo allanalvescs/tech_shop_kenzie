@@ -5,21 +5,34 @@ import Routes from './Routes/routes';
 import { GlobalStyle } from './style/globalstyle';
 import { Header } from './style/style';
 import { Context } from './Context/AuthContext';
-import { useState } from 'react';
+
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
   const [activeMenu, setActiveMenu] = useState(false)
+  const [store, setStore] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://kenzieshop.herokuapp.com/products")
+      .then((resp) => setStore(resp.data));
+  }, []);
+
   return (
-    <div>
+    <Context.Provider value={{ store, setStore }}>
+      
       <GlobalStyle />
+
       <Context.Provider value={{ activeMenu, setActiveMenu }}>
         <Header>
           <Logo />
           <NavPage />
         </Header>
       </Context.Provider>
+
       <Routes />
-    </div>
+    </Context.Provider>
   );
 }
 
