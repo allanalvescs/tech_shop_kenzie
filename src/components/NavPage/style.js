@@ -13,7 +13,7 @@ export const Menu = styled.ul`
     left: 0%;
     top: 7%;
 
-    display: flex;
+    display: ${prop => prop.displaymenu ? 'flex' : 'none'};
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -21,8 +21,6 @@ export const Menu = styled.ul`
     background-color: #000;
     height: 200px;
     width: 100%;
-
-    display: none;
 
     li{
 
