@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import {RiMenu3Fill} from 'react-icons/ri'
-
+import { RiMenu3Fill } from "react-icons/ri";
+import { Menu, Navegation } from "./style";
 
 function NavPage() {
   return (
-    <nav>
-      <ul>
+    <Navegation>
+      <figure>
+        <RiMenu3Fill color="#fff" size="45px" />
+      </figure>
+      <Menu>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -15,12 +18,8 @@ function NavPage() {
         <li>
           <Link to="/login">Login</Link>
         </li>
-      </ul>
-
-      <figure>
-        <RiMenu3Fill color="#fff" size="30px"/>
-      </figure>
-    </nav>
+      </Menu>
+    </Navegation>
   );
 }
 
