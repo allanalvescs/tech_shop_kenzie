@@ -3,7 +3,7 @@ import NavPage from './components/NavPage';
 import Routes from './Routes/routes';
 
 import { GlobalStyle } from './style/globalstyle';
-import { Header } from './style/style';
+import { Container, Header } from './style/style';
 import { Context } from './Context/AuthContext';
 
 import { useEffect, useState } from "react";
@@ -21,17 +21,19 @@ function App() {
 
   return (
     <Context.Provider value={{ store, setStore }}>
-      
-      <GlobalStyle />
+      <Container>
 
-      <Context.Provider value={{ activeMenu, setActiveMenu }}>
-        <Header>
-          <Logo />
-          <NavPage />
-        </Header>
-      </Context.Provider>
+        <GlobalStyle />
 
-      <Routes />
+        <Context.Provider value={{ activeMenu, setActiveMenu }}>
+          <Header>
+            <Logo />
+            <NavPage />
+          </Header>
+        </Context.Provider>
+
+        <Routes />
+      </Container>
     </Context.Provider>
   );
 }

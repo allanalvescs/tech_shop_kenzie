@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { FaSearch } from "react-icons/fa";
+
+import { useContext } from "react";
 import { Context } from "../../Context/AuthContext";
+
+import { FaSearch } from "react-icons/fa";
+import { ContainerResearch } from "./style";
 
 function Research() {
   const { store } = useContext(Context);
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const [filterProducts, setFilterProducts] = useState([]);
 
@@ -22,15 +25,16 @@ function Research() {
     });
 
     setFilterProducts(search);
+    reset();
   };
 
   return (
-    <form onSubmit={handleSubmit(handleSearch)}>
+    <ContainerResearch onSubmit={handleSubmit(handleSearch)}>
       <input type="text" placeholder="Pesquisa" {...register("value")} />
       <button type="submit">
-        <FaSearch />
+        <FaSearch size="20" />
       </button>
-    </form>
+    </ContainerResearch>
   );
 }
 
