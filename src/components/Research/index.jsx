@@ -6,7 +6,7 @@ import { Context } from "../../Context/AuthContext";
 import { FaSearch } from "react-icons/fa";
 import { ContainerResearch } from "./style";
 
-function Research() {
+function Research({ setIsFilter }) {
   const { store, setFilterProducts } = useContext(Context);
   const { register, handleSubmit, reset } = useForm();
 
@@ -22,6 +22,7 @@ function Research() {
     });
 
     setFilterProducts(search);
+    setIsFilter(true);
     reset();
   };
 

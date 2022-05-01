@@ -1,12 +1,15 @@
 import ListProducts from "../../components/ListProducts";
 import Research from "../../components/Research";
 
+import { useState } from "react";
+
 function Store() {
+  const [isfilter, setIsFilter] = useState(false);
   return (
     <main>
-      <Research />
+      <Research setIsFilter={setIsFilter} />
 
-      <ListProducts />
+      <ListProducts isfilter={isfilter}/>
     </main>
   );
 }
