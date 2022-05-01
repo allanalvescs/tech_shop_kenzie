@@ -28,6 +28,7 @@ function Research() {
     reset();
   };
 
+  console.log(store);
   return (
     <ContainerResearch onSubmit={handleSubmit(handleSearch)}>
       <input type="text" placeholder="Pesquisa" {...register("value")} />
