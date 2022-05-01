@@ -4,6 +4,8 @@ export const Container = styled.div`
     height: 100vh;
     background-color: #000;    
     overflow-y: scroll;
+
+    color: #fff;
 `
 
 export const Header = styled.header`

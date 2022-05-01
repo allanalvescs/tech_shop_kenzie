@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { useContext } from "react";
@@ -8,10 +7,8 @@ import { FaSearch } from "react-icons/fa";
 import { ContainerResearch } from "./style";
 
 function Research() {
-  const { store } = useContext(Context);
+  const { store, setFilterProducts } = useContext(Context);
   const { register, handleSubmit, reset } = useForm();
-
-  const [filterProducts, setFilterProducts] = useState([]);
 
   const handleSearch = (valueInput) => {
     const search = store.filter((product) => {
@@ -28,7 +25,6 @@ function Research() {
     reset();
   };
 
-  console.log(store);
   return (
     <ContainerResearch onSubmit={handleSubmit(handleSearch)}>
       <input type="text" placeholder="Pesquisa" {...register("value")} />
