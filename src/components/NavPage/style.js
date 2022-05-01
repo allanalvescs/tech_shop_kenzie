@@ -11,7 +11,7 @@ export const Navegation = styled.nav`
 export const Menu = styled.ul`
     position: absolute;
     left: 0%;
-    top: 7%;
+    top: 9%;
 
     display: ${prop => prop.displaymenu ? 'flex' : 'none'};
     flex-direction: column;

@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+    height: 100vh;
+    background-color: #000;    
+    overflow-y: scroll;
+`
+
 export const Header = styled.header`
-    background-color: #000;
     height: 80px;
 
     display: flex;
