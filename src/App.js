@@ -12,6 +12,7 @@ import axios from "axios";
 function App() {
   const [activeMenu, setActiveMenu] = useState(false)
   const [store, setStore] = useState([]);
+  const [filterProducts, setFilterProducts] = useState([]);
 
   useEffect(() => {
     axios
@@ -20,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <Context.Provider value={{ store, setStore }}>
+    <Context.Provider value={{ store, setStore,filterProducts,setFilterProducts }}>
       <Container>
 
         <GlobalStyle />
