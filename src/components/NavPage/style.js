@@ -6,6 +6,12 @@ export const Navegation = styled.nav`
     figure{
         text-align: end;
     }
+    @media screen and (min-width: 768px){
+        width: 500px;
+        figure{
+            display: none;
+        }
+    }
 `
 
 export const Menu = styled.ul`
@@ -18,13 +24,11 @@ export const Menu = styled.ul`
     justify-content: space-around;
     align-items: center;
 
-    background-color: #000;
-    height: 200px;
+    background-color: #000000d2;
+    height: 250px;
     width: 100%;
 
-    li{
-
-    }
+    z-index: 1;
 
     li a{
         color: #fff;
@@ -32,5 +36,14 @@ export const Menu = styled.ul`
         font-family: 'Bebas Neue', cursive;
 
         letter-spacing: 1px;
+    }
+
+    @media screen and (min-width: 768px){
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        height: 30px;
+        width: 100%;
     }
 `

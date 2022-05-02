@@ -14,4 +14,8 @@ export const ContainerLogo = styled.div`
         font-family: 'Bebas Neue', cursive;
         letter-spacing: 2px;
     }
+
+    @media screen and (min-width: 768px){
+        width: 30%;
+    }
 `

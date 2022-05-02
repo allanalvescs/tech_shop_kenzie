@@ -15,4 +15,9 @@ export const Header = styled.header`
     flex-wrap: wrap;
     align-items: center;
 
+    @media screen and (min-width: 768px){
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
 `

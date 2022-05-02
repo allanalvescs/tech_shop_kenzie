@@ -35,6 +35,7 @@ export const Information = styled.div`
     
     padding: 10px;
     background-color: #5E52FF;
+    flex-basis: 312px;
     
     h2{
         font-size: 1rem;
@@ -54,6 +55,7 @@ export const Information = styled.div`
         background-color: #1B82DB;
         color: #fff;
         font-family: 'Bebas Neue', cursive;
+        font-size: 1.1rem;
     }
 `
 
