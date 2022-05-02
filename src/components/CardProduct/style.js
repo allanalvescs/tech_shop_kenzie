@@ -34,6 +34,8 @@ export const Item = styled.div`
         position: relative;
         bottom: 65%;
         left: 35%;
+
+        cursor: pointer;
     }
 
     a{

@@ -16,7 +16,7 @@ function CardProduct({ title, image, price, description, id }) {
       <img src={image} alt={description} />
       <h3>{title.length > 15 ? `${title.slice(0, 15)}...` : title}</h3>
       <FaTrashAlt color="red" onClick={() => handleRemoveItem(id)} />
-      <Link>
+      <Link to="/compra/product">
         <FaClipboardCheck size="15" />
       </Link>
       <p>R$ {price}</p>
