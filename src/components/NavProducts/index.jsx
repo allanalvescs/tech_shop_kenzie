@@ -18,7 +18,13 @@ function NavProducts({ setIsFilter }) {
   return (
     <Nav>
       <List>
-        <li>todos</li>
+        <li
+          onClick={() => {
+            setFilterProducts(store);
+          }}
+        >
+          todos
+        </li>
         <li onClick={() => filterbybrand("Samsung")}>Samsung</li>
         <li onClick={() => filterbybrand("Xiaomi")}>Xiaomi</li>
         <li onClick={() => filterbybrand("iPhone")}>Iphone</li>
