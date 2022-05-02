@@ -45,18 +45,7 @@ export const Information = styled.div`
         width: 80%;
     }
 
-    button{
-        width: 120px;
-        height: 35px;
-
-        border: solid 2px #000;
-        border-radius: 25px;
-        
-        background-color: #1B82DB;
-        color: #fff;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 1.1rem;
-    }
+    
 `
 
 export const CarBuy = styled.figure`
@@ -82,4 +71,26 @@ export const Price = styled.p`
 export const Descripition = styled.p`
   font-size: 0.7rem;
   font-weight: 700;
+`
+
+export const ContainerButtons = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+
+  button{
+        width: 120px;
+        height: 45px;
+
+        border: solid 2px #000;
+        border-radius: 25px;
+        cursor: pointer;
+        
+        background-color: #1B82DB;
+        color: #fff;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1rem;
+    }
+
 `

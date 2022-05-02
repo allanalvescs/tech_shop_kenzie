@@ -26,21 +26,33 @@ export const ContainerCar = styled.div`
     justify-content: center;
     align-items: center;
 
-`
+    
+    `
 
 export const Car = styled.div`
      width: 300px;
-    height: 300px;
-
-    border: solid 2px #fff;
-    border-radius: 15px;
-
+     height: 400px;
+     
+     border: solid 2px #fff;
+     border-radius: 15px;
+     overflow-y: scroll;
+     
     display: flex;
     flex-direction: column;
     align-items: center;
 
     background-color: #000;
     animation: ${Show} 1.5s;
+
+    &::-webkit-scrollbar{
+        width: 8px;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: #5E52FF;
+        border-radius: 10px;
+    }
 
     h2{
         color: #fff;
@@ -69,4 +81,8 @@ export const ContainerInitial = styled.div`
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-color: #1B82DB;
+
+    svg{
+        cursor: pointer;
+    }
 `

@@ -1,7 +1,7 @@
 import { BsCart4 } from "react-icons/bs";
 import { Button, ContainerButton } from "./style";
 
-function AddCar({ setCheckCar }) {
+function ShowCar({ setCheckCar }) {
   return (
     <ContainerButton>
       <Button
@@ -15,4 +15,4 @@ function AddCar({ setCheckCar }) {
   );
 }
 
-export default AddCar;
+export default ShowCar;
