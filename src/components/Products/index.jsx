@@ -11,9 +11,12 @@ import { BsCart4 } from "react-icons/bs";
 import { useContext } from "react";
 import { Context } from "../../Context/AuthContext";
 
+import { useHistory } from "react-router-dom";
+
 function Product({ id, title, image, price, description }) {
   const { setCurrentSale, currentSale, store } = useContext(Context);
 
+  const history = useHistory();
   const handleAddBuy = (productId) => {
     const valid = currentSale.some((value) => value.id === productId);
     if (!valid) {
@@ -37,7 +40,9 @@ function Product({ id, title, image, price, description }) {
         <Price>R$ {price}</Price>
 
         <ContainerButtons>
-          <button>Comprar</button>
+          <button onClick={() => history.push("/compra/produto")}>
+            Comprar
+          </button>
           <button onClick={() => handleAddBuy(id)}>
             Adicionar ao carrinho
           </button>
