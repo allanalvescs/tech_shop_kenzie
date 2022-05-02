@@ -8,6 +8,7 @@ import { Context } from './Context/AuthContext';
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import NavProducts from './components/NavProducts';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState(false)
@@ -21,18 +22,15 @@ function App() {
   }, []);
   console.log(store)
   return (
-    <Context.Provider value={{ store, setStore, filterProducts, setFilterProducts }}>
+    <Context.Provider value={{ store, setStore, filterProducts, setFilterProducts, activeMenu, setActiveMenu }}>
       <Container>
 
         <GlobalStyle />
 
-        <Context.Provider value={{ activeMenu, setActiveMenu }}>
-          <Header>
-            <Logo />
-            <NavPage />
-          </Header>
-        </Context.Provider>
-
+        <Header>
+          <Logo />
+          <NavPage />
+        </Header>
         <Routes />
       </Container>
     </Context.Provider>
