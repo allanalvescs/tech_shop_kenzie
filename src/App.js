@@ -19,9 +19,9 @@ function App() {
       .get("https://kenzieshop.herokuapp.com/products")
       .then((resp) => setStore(resp.data));
   }, []);
-
+  console.log(store)
   return (
-    <Context.Provider value={{ store, setStore,filterProducts,setFilterProducts }}>
+    <Context.Provider value={{ store, setStore, filterProducts, setFilterProducts }}>
       <Container>
 
         <GlobalStyle />

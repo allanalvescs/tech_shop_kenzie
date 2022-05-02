@@ -1,18 +1,23 @@
+import { CarBuy, Image, Information, Item, Price } from "./style";
+import { BsCart4 } from "react-icons/bs";
+
 function Product({ title, image, price, description }) {
   return (
-    <li>
-      <figure>
+    <Item>
+      <Image>
         <img src={image} alt={description} />
-      </figure>
-      <div>
-        <img src="#" alt="" />
+      </Image>
+      <Information>
+        <CarBuy>
+          <BsCart4 size="20" color="#000" />
+        </CarBuy>
         <h2>{title}</h2>
         <p>{description}</p>
-        <p>R$ {price}</p>
+        <Price>R$ {price}</Price>
 
         <button>Comprar</button>
-      </div>
-    </li>
+      </Information>
+    </Item>
   );
 }
 

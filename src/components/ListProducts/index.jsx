@@ -3,12 +3,13 @@ import { Context } from "../../Context/AuthContext";
 
 import NotFound from "../NotFound";
 import Product from "../Products";
+import { List } from "./style";
 
 function ListProducts({ isfilter }) {
   const { store, filterProducts } = useContext(Context);
 
   return (
-    <ul>
+    <List>
       {isfilter ? (
         filterProducts.length === 0 ? (
           <NotFound />
@@ -38,7 +39,7 @@ function ListProducts({ isfilter }) {
           );
         })
       )}
-    </ul>
+    </List>
   );
 }
 
