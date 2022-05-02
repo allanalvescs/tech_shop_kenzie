@@ -70,9 +70,7 @@ export const CarBuy = styled.figure`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  position: relative;
-  left: 85%;
+  
 `
 
 export const Price = styled.p`

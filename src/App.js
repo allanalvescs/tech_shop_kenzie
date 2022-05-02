@@ -12,6 +12,7 @@ import NavProducts from './components/NavProducts';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [store, setStore] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
 
@@ -19,10 +20,12 @@ function App() {
     axios
       .get("https://kenzieshop.herokuapp.com/products")
       .then((resp) => setStore(resp.data));
+
+    setLoading(false)
   }, []);
-  console.log(store)
+
   return (
-    <Context.Provider value={{ store, setStore, filterProducts, setFilterProducts, activeMenu, setActiveMenu }}>
+    <Context.Provider value={{ store, setStore, filterProducts, setFilterProducts, activeMenu, setActiveMenu, loading }}>
       <Container>
 
         <GlobalStyle />

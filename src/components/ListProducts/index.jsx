@@ -3,10 +3,16 @@ import { Context } from "../../Context/AuthContext";
 
 import NotFound from "../NotFound";
 import Product from "../Products";
-import { List } from "./style";
+import { List, Loading } from "./style";
+
+//import { motion } from "framer-motion";
 
 function ListProducts({ isfilter }) {
-  const { store, filterProducts } = useContext(Context);
+  const { store, filterProducts, loading } = useContext(Context);
+
+  if (loading) {
+    return <Loading color="#fff">Loading...</Loading>;
+  }
 
   return (
     <List>
