@@ -37,10 +37,15 @@ function Product({ id, title, image, price, description }) {
         </CarBuy>
         <h2>{title}</h2>
         <p>{description}</p>
-        <Price>R$ {price}</Price>
+        <Price>
+          {Number(price).toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          })}
+        </Price>
 
         <ContainerButtons>
-          <button onClick={() => history.push("/compra/produto")}>
+          <button onClick={() => history.push(`/compra/${title}`)}>
             Comprar
           </button>
           <button onClick={() => handleAddBuy(id)}>

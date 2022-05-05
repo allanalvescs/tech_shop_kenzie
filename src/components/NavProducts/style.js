@@ -18,5 +18,6 @@ export const List = styled.ul`
   li{
       font-weight: 700;
       text-decoration: underline;
+      cursor: pointer;
   }
 `

@@ -40,6 +40,7 @@ function App() {
             <NavPage />
           </Header>
         </Context.Provider>
+        
         <Routes />
       </Container>
     </Context.Provider>
